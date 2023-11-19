@@ -43,11 +43,18 @@ public class Player : MonoBehaviour
             if (moveInput.x < 0)
             {
                 spriteRenderer.flipX = true;
+                gameObject.BroadcastMessage("FacingRight", true);
             }
             else if (moveInput.x > 0)
             {
                 spriteRenderer.flipX = false;
+                gameObject.BroadcastMessage("FacingRight", false);
             }
         }
+    }
+
+    void OnFire()
+    {
+        animator.SetTrigger("swordAttack");
     }
 }
