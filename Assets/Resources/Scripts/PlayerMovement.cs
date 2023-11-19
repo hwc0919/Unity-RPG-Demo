@@ -9,17 +9,19 @@ public class Player : MonoBehaviour
     Vector2 moveInput;
     public float moveSpeed;
     Animator animator;
+    SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -38,6 +40,14 @@ public class Player : MonoBehaviour
         else
         {
             animator.SetBool("isWalking", true);
+            if (moveInput.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (moveInput.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
         }
     }
 }
