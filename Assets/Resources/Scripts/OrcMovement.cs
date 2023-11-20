@@ -45,4 +45,14 @@ public class OrcMovement : MonoBehaviour
             spriteRenderer.flipX = false;
         }
     }
+
+    void OnDamage()
+    {
+        animator.SetTrigger("isAttacked");
+    }
+
+    void OnDie()
+    {
+        animator.SetBool("isDead", true);
+    }
 }
