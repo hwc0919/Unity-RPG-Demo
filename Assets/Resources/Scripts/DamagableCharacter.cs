@@ -40,6 +40,11 @@ public class DamagableCharacter : MonoBehaviour, IDamagable
         set
         {
             Debug.Log($"Set heath from {health} to {value}.");
+            if (health <= 0)
+            {
+                return;
+            }
+            if (value < 0) value = 0;
             if (value < health)
             {
                 gameObject.BroadcastMessage("OnDamage");

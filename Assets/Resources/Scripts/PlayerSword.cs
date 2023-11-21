@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerSword : MonoBehaviour
 {
     Vector3 position;
-    public int attackDamage;
-    public int knockbackForce;
+    public WeaponProperty wp;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +39,7 @@ public class PlayerSword : MonoBehaviour
             Vector3 parentPosition = transform.parent.position;
             Vector2 direction = collision.transform.position - parentPosition;
 
-            damagable.OnHit(attackDamage, direction.normalized * knockbackForce);
+            damagable.OnHit(wp.attackDamage, direction.normalized * wp.knockbackForce);
         }
     }
 }

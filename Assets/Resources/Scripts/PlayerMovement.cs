@@ -57,4 +57,14 @@ public class Player : MonoBehaviour
     {
         animator.SetTrigger("swordAttack");
     }
+
+    void OnDamage()
+    {
+        animator.SetTrigger("isAttacked");
+    }
+
+    void OnDie()
+    {
+        animator.SetBool("isDead", true);
+    }
 }

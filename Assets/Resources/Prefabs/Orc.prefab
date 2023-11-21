@@ -196,6 +196,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 80
+  wp:
+    attackDamage: 10
+    knockbackForce: 2000
 --- !u!114 &5099395296496186956
 MonoBehaviour:
   m_ObjectHideFlags: 0

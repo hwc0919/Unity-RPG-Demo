@@ -11,6 +11,10 @@ public class OrcMovement : MonoBehaviour
 
     DetectionZone detectionZone;
 
+    public WeaponProperty wp;
+    float lastAttack = 0f;
+    const float attackInterval = 2.0f;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -54,5 +58,24 @@ public class OrcMovement : MonoBehaviour
     void OnDie()
     {
         animator.SetBool("isDead", true);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (Time.time - lastAttack < attackInterval)
+        {
+            return;
+        }
+        lastAttack = Time.time;
+
+        Collider2D collider = collision.collider;
+        IDamagable dmg = collider.GetComponent<IDamagable>();
+
+        Debug.Log($"orc collides with {collider.gameObject.name}");
+        if (dmg != null && collider.tag == "Player")
+        {
+            Vector2 direction = collider.transform.position - transform.position;
+            dmg.OnHit(wp.attackDamage, direction.normalized * wp.knockbackForce);
+        }
     }
 }

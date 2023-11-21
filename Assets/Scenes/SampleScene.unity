@@ -14044,6 +14044,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 969969542890916871, guid: 8cdb37de0633e7f42ae8f0de744efec1, type: 3}
+      propertyPath: wp.knockbackForce
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 3185507170094349245, guid: 8cdb37de0633e7f42ae8f0de744efec1, type: 3}
       propertyPath: m_Name
       value: Orc
