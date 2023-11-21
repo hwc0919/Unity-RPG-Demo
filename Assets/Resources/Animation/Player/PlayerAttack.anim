@@ -52,7 +52,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: SwordCollider
+    path: Sword
     classID: 61
     script: {fileID: 0}
     flags: 0
@@ -66,7 +66,7 @@ AnimationClip:
     - time: 0.18333334
       value: {fileID: 266891876565821341, guid: 1c9b84d978891c24288defb67855d5f3, type: 3}
     - time: 0.26666668
-      value: {fileID: 7001301442144917385, guid: 1c9b84d978891c24288defb67855d5f3, type: 3}
+      value: {fileID: 1173335314239885238, guid: 1c9b84d978891c24288defb67855d5f3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -80,7 +80,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2375051869
+      path: 1529145355
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 61
@@ -101,7 +101,7 @@ AnimationClip:
     - {fileID: 1173335314239885238, guid: 1c9b84d978891c24288defb67855d5f3, type: 3}
     - {fileID: -7729339473455529383, guid: 1c9b84d978891c24288defb67855d5f3, type: 3}
     - {fileID: 266891876565821341, guid: 1c9b84d978891c24288defb67855d5f3, type: 3}
-    - {fileID: 7001301442144917385, guid: 1c9b84d978891c24288defb67855d5f3, type: 3}
+    - {fileID: 1173335314239885238, guid: 1c9b84d978891c24288defb67855d5f3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -158,7 +158,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: SwordCollider
+    path: Sword
     classID: 61
     script: {fileID: 0}
     flags: 0
