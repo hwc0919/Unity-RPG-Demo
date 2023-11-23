@@ -39,7 +39,14 @@ public class PlayerSword : MonoBehaviour
             Vector3 parentPosition = transform.parent.position;
             Vector2 direction = collision.transform.position - parentPosition;
 
-            damagable.OnHit(wp.attackDamage, direction.normalized * wp.knockbackForce);
+            int damage = wp.attackDamage;
+            bool isCritical = Random.Range(0, 100) < 30;
+            if (isCritical)
+            {
+                damage *= 2;
+            }
+            damagable.OnHit(damage, direction.normalized * wp.knockbackForce);
+            DamagePopup.Create(collision.transform.position, damage, isCritical);
         }
     }
 }
